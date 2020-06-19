@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Estantes de Libros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
   <p align="center">
     <a href="https://getbootstrap.com/">
-      <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="92" height="92">
+      <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="55" height="55">
     </a>
   </p>
     <div class="container ">
@@ -18,19 +17,23 @@
           <form id="book-form">
             <div class="form-group">
               <label for="title">Titulo</label>
-              <input type="text" id="title" class="form-control">
+              <input type="text" id="title" class="form-control" placeholder="Escribe el nombre del libro">
             </div>
             <div class="form-group">
               <label for="author">Author</label>
-              <input type="text" id="author" class="form-control">
+              <input type="text" id="author" class="form-control" placeholder="Escribe su autor">
             </div>
             <div class="form-group">
-              <label for="isbn">Codigo</label>
-              <input type="text" id="isbn" class="form-control">
+              <label for="isbn">Codigo Bibliotecario</label>
+              <input type="text" id="isbn" class="form-control" placeholder="Solo numeros">
+            </div>
+            <div class="form-group">
+              <label for="fecha">Fecha de Publicacion</label>
+              <input type="date" id="fecha" class="form-control">
             </div>
             <br>
             <br>
-            <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+            <input type="submit" value="Añadir Libro" class="btn btn-primary btn-block">
           </form>
           <table class="table table-striped mt-5">
             <thead>
@@ -39,13 +42,15 @@
               <tr>
                 <th>Titulo</th>
                 <th>Author</th>
-                <th>Codigo</th>
+                <th>Codigo Bibliotecario</th>
+                <th>Fecha de Publicacion</th>
                 <th></th>
               </tr>
             </thead>
             <tbody id="book-list"></tbody>
           </table>
       </div>
-<script src="books.js"></script>    
+<script src="books.js"></script> 
+<script src="style.css"></script>   
 </body>
 </html>

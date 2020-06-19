@@ -1,8 +1,9 @@
 class Book {
-    constructor(title, author, isbn) {
+    constructor(title, author, isbn,fecha) {
       this.title = title;
       this.author = author;
       this.isbn = isbn;
+      this.fecha= fecha;
     }
   }
   
@@ -22,7 +23,9 @@ class Book {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
-        <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+        <td>${book.fecha}</td>
+        <td><a href="#" class="btn btn-primary btn-sm delete">Editar</a></td>
+        <td><a href="#" class="btn btn-danger btn-sm delete">Eliminar</a></td>
       `;
   
       list.appendChild(row);
@@ -50,6 +53,7 @@ class Book {
       document.querySelector('#title').value = '';
       document.querySelector('#author').value = '';
       document.querySelector('#isbn').value = '';
+      document.querySelector('#fecha').value='';
     }
   }
   
